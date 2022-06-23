@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/GameStore/static/css/main.3fb21e3e.css",
+    "main.js": "/GameStore/static/js/main.6056de5f.js",
+    "static/js/787.6a541d2d.chunk.js": "/GameStore/static/js/787.6a541d2d.chunk.js",
+    "index.html": "/GameStore/index.html",
+    "static/media/search.svg": "/GameStore/static/media/search.185c2e4fe8dcf508d83b.svg",
+    "main.3fb21e3e.css.map": "/GameStore/static/css/main.3fb21e3e.css.map",
+    "main.6056de5f.js.map": "/GameStore/static/js/main.6056de5f.js.map",
+    "787.6a541d2d.chunk.js.map": "/GameStore/static/js/787.6a541d2d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fb21e3e.css",
+    "static/js/main.6056de5f.js"
+  ]
+}
