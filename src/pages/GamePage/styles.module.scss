@@ -1,0 +1,19 @@
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    & h1{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.img{
+    width: 100%;
+    height: 450px;
+}

@@ -1,0 +1,21 @@
+.item{
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    width: 85%; 
+}
+
+.delete{
+    transition: all 0.6s ;
+    :hover{
+        color: rgb(185, 102, 244);
+    }
+}

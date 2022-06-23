@@ -1,0 +1,45 @@
+.card{
+    background-color: #2b2b2b;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+
+    &:hover{
+        border: 2px solid rgb(172, 78, 240);
+    }
+    
+}
+.image{
+    height: 170px;
+    width: 100%;
+}
+.genre{
+    font-size: 10px;
+    margin-right: 10px;
+    color: #777777;
+}
+.info{
+    padding: 15px;
+}
+.title{
+    font-size: 16px;
+    font-weight: 700;
+}
+.description{
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+@keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
