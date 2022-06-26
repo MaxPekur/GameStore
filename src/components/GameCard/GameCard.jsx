@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { addItemInCart, deleteItem } from "../../redux/cart/reducer";
 import { setCurrentGame } from "../../redux/games/reducer";
 import GameImage from "../GameImage/GameImage";
+import Rating from "../Rating/Rating";
 import Button from "../UI/Button/Button";
 import styles from "./styles.module.scss";
 
@@ -24,9 +25,9 @@ const GameCard = ({ game }) => {
 
   const currentGame = () => {
     dispatch(setCurrentGame(game));
-    navigate(`/app/${game.title}`)
-  }
-  
+    navigate(`/app/${game.title}`);
+  };
+
   return (
     <div className={styles.card} onClick={currentGame}>
       <div>
@@ -36,12 +37,9 @@ const GameCard = ({ game }) => {
         <div className={styles.info}>
           <div className={styles.title}>{game.title}</div>
           <div>
-            {game.genres.map((genre, idx) => (
-              <span key={idx} className={styles.genre}>
-                {genre}
-              </span>
-            ))}
+            <span className={styles.genre}>{game.genre}</span>
           </div>
+          <Rating value={game.rating} />
           <div className={styles.description}>{game.description}</div>
         </div>
       </div>

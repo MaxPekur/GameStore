@@ -1,6 +1,6 @@
 .item{
     background-color: #1b1b1b;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     padding: 15px 10px;
     margin-bottom: 10px;
     display: flex;
@@ -16,6 +16,6 @@
 .delete{
     transition: all 0.6s ;
     :hover{
-        color: rgb(185, 102, 244);
+        color: var(--violet-color-hover);
     }
 }

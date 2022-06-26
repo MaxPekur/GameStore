@@ -1,43 +1,49 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import MenuItem from "../MenuItem/MenuItem";
 import styles from "./styles.module.scss";
 
 const menuItems = [
   {
-    id: "001",
     title: "Все",
   },
   {
-    id: "002",
     title: "Гонки",
   },
   {
-    id: "003",
     title: "Симуляторы",
   },
   {
-    id: "004",
     title: "Онлайн",
   },
   {
-    id: "005",
     title: "Приключения",
   },
 ];
 
+
 const Aside = () => {
-  const [activeItem, setActiveItem] = useState(0);
+  const [genreList, setGenreList] = useState(menuItems);
+  const [activeGenre, setActiveGenre] = useState(0);
+  const games = useSelector((state) => state.game.games);
+
+
+  const sortGames = (idx, games) => {
+    setActiveGenre(idx)
+    
+
+  }
 
   return (
     <div className={styles.root}>
       <h2>Жанры</h2>
       <nav className={styles.nav}>
-        {menuItems.map((item, index) => (
+        {genreList.map((genre, idx) => (
           <MenuItem
-            key={item.id}
-            menuItem={item}
-            onClick={() => setActiveItem(index)}
-            className={activeItem === index ? 'active' : ''}
+            key={idx}
+            menuItem={genre}
+            onClick={() => sortGames(idx, games)}
+            className={activeGenre === idx ? "active" : ""}
           />
         ))}
       </nav>

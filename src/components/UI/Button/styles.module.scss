@@ -1,12 +1,12 @@
 .button{
     padding: 10px 20px;
-    background-color: rgb(172, 78, 240);
-    border-radius: 10px;
+    background-color: var(--violet-color);
+    border-radius: var(--border-radius);
     border: none;
-    font-size: 12px;
-    color: #fff;
+    font-size: var(--font-size-small);
+    color: var(--color-white);
     &:hover{
-        background-color: rgb(185, 102, 244);
+        background-color: var(--violet-color-hover);
         ;
     }
 }
