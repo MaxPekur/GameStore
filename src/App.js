@@ -4,7 +4,6 @@ import HomePage from "./pages/HomePage/HomePage";
 import OrderPage from "./pages/OrderPage/OrderPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
-import { store } from "./store";
 import GamePage from "./pages/GamePage/GamePage";
 import Footer from "./components/Footer/Footer";
 

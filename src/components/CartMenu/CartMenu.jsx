@@ -2,16 +2,23 @@ import React, { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 import Button from "../UI/Button/Button";
+import { useAuth } from "../../hook/useAuth";
 
 import styles from "./styles.module.scss";
 
 const CartMenu = ({ items, onClick }) => {
-  const total = items.reduce((acc, item) => (acc += item.price), 0);
+  const { isAuth, email } = useAuth();
   let navigate = useNavigate();
 
+  const total = items.reduce((acc, item) => (acc += item.price), 0);
+
   const toOrder = useCallback(() => {
-    onClick()
-    navigate("/order");
+    onClick();
+    if (isAuth) {
+      navigate("/order");
+    } else {
+      navigate("/login");
+    }
   }, [navigate]);
 
   return (

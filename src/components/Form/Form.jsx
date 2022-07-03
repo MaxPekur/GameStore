@@ -27,7 +27,7 @@ const Form = ({ title, handleClick }) => {
         />
       </div>
 
-      <Button children={title} onClick={handleClick} />
+      <Button children={title} onClick={() => handleClick(email, pass)} />
     </div>
   );
 };

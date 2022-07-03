@@ -1,5 +1,4 @@
-import classNames from "classnames";
-import React, { useState } from "react";
+import React from "react";
 
 import star from "./img/star.svg";
 import starFill from "./img/star-fill.svg";
@@ -13,6 +12,7 @@ const Rating = ({ value }) => {
         .fill()
         .map((item, index) => (
           <img
+            key={index}
             className={styles.star}
             src={index + 1 <= value ? starFill : star}
             alt="star"
