@@ -1,17 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './styles.module.scss'
 
-const Input = ({ placeholder, width, type }) => {
-
-  const [searchGame, setSearchGame] = useState('')
+const Input = ({ placeholder, width, type, value, onChange }) => {
 
   return (
     <input 
-      value={searchGame}
+      value={value}
       type={type} 
       style={ {width: width} } 
       placeholder={placeholder} 
-      onChange={(e) => setSearchGame(e.target.value)}
+      onChange={onChange}
     />
   )
 }

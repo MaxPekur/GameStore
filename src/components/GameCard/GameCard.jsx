@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addItemInCart, deleteItem } from "../../redux/cart/reducer";
-import { setCurrentGame } from "../../redux/games/reducer";
+import { addItemInCart, deleteItem } from "../../store/cart/cartSlice";
+import { setCurrentGame } from "../../store/games/gameSlice";
 import GameImage from "../GameImage/GameImage";
 import Rating from "../Rating/Rating";
 import Button from "../UI/Button/Button";

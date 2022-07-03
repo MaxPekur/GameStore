@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineDelete } from 'react-icons/ai'
 import { useDispatch } from "react-redux";
-import { deleteItem } from '../../redux/cart/reducer'
+import { deleteItem } from '../../store/cart/cartSlice'
 import styles from "./styles.module.scss";
 
 const CartItem = ({ game }) => {
