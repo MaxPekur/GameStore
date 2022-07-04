@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import GamePage from "./pages/GamePage/GamePage";
 import Footer from "./components/Footer/Footer";
+import FavoritesPage from './pages/FavoritesPage/FavoritesPage'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/order" element={<OrderPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
       </Routes>
       <Footer />
     </Router>

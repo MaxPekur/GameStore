@@ -1,12 +1,12 @@
 .button{
     padding: 10px 20px;
-    background-color: var(--violet-color);
+    background-color: var(--color-button);
     border-radius: var(--border-radius);
     border: none;
     font-size: var(--font-size-small);
     color: var(--color-white);
     &:hover{
-        background-color: var(--violet-color-hover);
+        background-color: var(--color-button-active);
         ;
     }
 }

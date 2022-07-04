@@ -3,14 +3,14 @@ import classnames from "classnames";
 
 import styles from "./styles.module.scss";
 
-const MenuItem = ({ menuItem, className, onClick }) => {
+const MenuItem = ({ genre, className, onClick }) => {
   return (
-    <div
+    <span
       onClick={onClick}
       className={classnames(styles.root, className ? styles.active : '')}
     >
-      {menuItem.title}
-    </div>
+      {genre}
+    </span>
   );
 };
 

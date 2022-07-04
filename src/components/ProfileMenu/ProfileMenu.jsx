@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { removeUser } from "../../store/user/userSlice";
-import noAvatar from './img/noavatar.png'
-import classnames from 'classnames'
+import noAvatar from "./img/noavatar.png";
+import classnames from "classnames";
 import Button from "../UI/Button/Button";
 
 import styles from "./styles.module.scss";
@@ -16,13 +16,25 @@ const ProfileMenu = () => {
   return (
     <div className={styles.profileMenu}>
       <span className={styles.userName} onClick={() => setActive(!active)}>
-        <img src={noAvatar} alt={'avatar'}/>
+        <img src={noAvatar} alt={"avatar"} />
       </span>
 
-      <div className={!active ? styles.menu : classnames(styles.menu, styles.active)}>
+      <div
+        className={
+          !active ? styles.menu : classnames(styles.menu, styles.active)
+        }
+      >
         <ul className={styles.list}>
-          <li>Профиль</li>
-          <li>Избранное</li>
+          <li>
+            <Link to={"/"} onClick={() => setActive(false)}>
+              Профиль
+            </Link>
+          </li>
+          <li>
+            <Link to={"/favorites"} onClick={() => setActive(false)}>
+              Избранное
+            </Link>
+          </li>
         </ul>
         <Button
           children={"Выйти"}

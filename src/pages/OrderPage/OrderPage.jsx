@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import OrderItem from "../../components/OrderItem/OrderItem";
 import Input from "../../components/UI/Input/Input";
+import Button from "../../components/UI/Button/Button";
 import styles from "./styles.module.scss";
 
 const OrderPage = () => {
@@ -15,12 +16,12 @@ const OrderPage = () => {
           <div className={styles.user}>
             <form className={styles.user_info}>
               <div>
-                <Input type={'email'} placeholder={"Email"} />
+                <Input type={"email"} placeholder={"Email"} />
                 <Input placeholder={"+7 (000) 000-00-00"} />
                 <Input placeholder={"Фамилия"} />
                 <Input placeholder={"Имя"} />
               </div>
-              <Input width={'95%'} placeholder={"Адрес"} />
+              <Input width={"100%"} placeholder={"Адрес"} />
             </form>
           </div>
           <div className={styles.adrres}></div>
@@ -31,9 +32,14 @@ const OrderPage = () => {
               <OrderItem game={game} />
             ))}
           </div>
-          <div>
-            <span>Всего: </span>
-            <span>$ {items.reduce((acc, game) => (acc += game.price), 0)}</span>
+          <div className={styles.bottom}>
+            <div className={styles.total}>
+              <span>Всего: </span>
+              <span>
+                $ {items.reduce((acc, game) => (acc += game.price), 0)}
+              </span>
+            </div>
+            <Button children={"Оформить"} />
           </div>
         </div>
       </div>

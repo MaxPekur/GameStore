@@ -26,7 +26,7 @@ const RegisterPage = () => {
         );
         navigate("/");
       })
-      .catch(console.error);
+      .catch(err => alert(err.message))
   };
   return (
     <div className={styles.register}>

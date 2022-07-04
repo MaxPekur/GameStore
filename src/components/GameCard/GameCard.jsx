@@ -30,22 +30,26 @@ const GameCard = ({ game }) => {
 
   return (
     <div className={styles.card} onClick={currentGame}>
-      <div>
-        <div className={styles.image}>
-          <GameImage image={game.image} />
-        </div>
-        <div className={styles.info}>
-          <div className={styles.title}>{game.title}</div>
-          <div>
-            <span className={styles.genre}>{game.genre}</span>
+      <div className={styles.content}>
+        <div className={styles.top}>
+          <div className={styles.image}>
+            <GameImage image={game.image} />
           </div>
-          <Rating value={game.rating} />
-          <div className={styles.description}>{game.description}</div>
+          <div className={styles.info}>
+            <div className={styles.title}>{game.title}</div>
+            <div>
+              <span className={styles.genre}>{game.genre}</span>
+            </div>
+            <Rating value={game.rating} />
+            <div className={styles.description}>{game.description}</div>
+          </div>
         </div>
       </div>
-      <Button onClick={handlerClick}>
-        {isItemInCart ? "Убрать из корзины" : `$ ${game.price}`}
-      </Button>
+      <div className={styles.bottom}>
+        <Button onClick={handlerClick}>
+          {isItemInCart ? "Убрать из корзины" : `$ ${game.price}`}
+        </Button>
+      </div>
     </div>
   );
 };

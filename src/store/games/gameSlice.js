@@ -11,11 +11,8 @@ const gamesReducer = createSlice({
     setCurrentGame: (state, action) => {
       state.currentGame = action.payload;
     },
-    setSortGames: (state, action) => {
-      state.games = action.payload
-    }
   },
 });
 
-export const { setCurrentGame, setSortGames } = gamesReducer.actions;
+export const { setCurrentGame } = gamesReducer.actions;
 export default gamesReducer.reducer;
